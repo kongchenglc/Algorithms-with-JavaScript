@@ -1,2 +1,2 @@
-# 数据结构JavaScript描述
+# 算法JavaScript描述
 Algorithms-with-JavaScript
