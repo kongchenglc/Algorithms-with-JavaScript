@@ -1,26 +1,26 @@
 function quickSort(array) {
 	function sort(prev, numsize) {
-		var nonius = prev;
+		var i = prev;
 		var j = numsize - 1;
 		var flag = array[prev];
 		if ((numsize - prev) > 1) {
-			while (nonius < j) {
-				for (; nonius < j; j--) {
+			while (i < j) {
+				for (; i < j; j--) {
 					if (array[j] < flag) {
-						array[nonius++] = array[j];　 //a[i] = a[j]; i += 1;
+						array[i++] = array[j];　 //a[i] = a[j]; i += 1;
 						break;
 					};
 				}
-				for (; nonius < j; nonius++) {
-					if (array[nonius] > flag) {
-						array[j--] = array[nonius];
+				for (; i < j; i++) {
+					if (array[i] > flag) {
+						array[j--] = array[i];
 						break;
 					}
 				}
 			}
-			array[nonius] = flag;
-			sort(0, nonius);
-			sort(nonius + 1, numsize);
+			array[i] = flag;
+			sort(0, i);
+			sort(i + 1, numsize);
 		}
 	}
 	sort(0, array.length);
